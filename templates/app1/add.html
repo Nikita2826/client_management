@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}
+    <title>Title</title>
+{% endblock %}
+
+{% block content %}
+<h1>Employee Form</h1>
+<form method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <button class="btn btn-success col-6">Submit</button>
+    <button type="reset" class="btn btn-danger col-6 float-end">Submit</button>
+</form>
+{% endblock %}
